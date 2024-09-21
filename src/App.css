@@ -1,7 +1,49 @@
+/* App.css */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  scrollbar-width: none;
+  overflow-x: hidden;
+}
+
+*{
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
 
+/* Navbar styling */
+.navbar {
+  height: 70px; /* Set height for the navbar */
+  color: white; /* Text color */
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  position: fixed;
+}
+
+/* Make Textform and About each take 100vh */
+.textform,
+.about {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Optional padding */
+  box-sizing: border-box; /* Ensures padding doesn't affect total height */
+}
+
+
+/* Button styling */
+button {
+  margin: 10px;
+  padding: 10px;
+}
+
+/* Other styles */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -14,7 +56,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
