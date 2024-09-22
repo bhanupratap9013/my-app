@@ -22,7 +22,6 @@ html, body {
   display: flex;
   align-items: center;
   width: 100vw;
-  position: fixed;
 }
 
 /* Make Textform and About each take 100vh */

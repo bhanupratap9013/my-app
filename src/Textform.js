@@ -1,10 +1,22 @@
 import React, { useState } from 'react';
 
 export default function Textform(props) {
-  const [text, setText] = useState("Enter text here");
+  const [text, setText] = useState("");
   
   function convertToUpperCase() {
+    if(text.length<2)
+        return;
+
     setText(text.toUpperCase());
+    props.showAlert("TextConvert to uppercase","success");
+  }
+
+  function deleteText(){
+    if(text.length<2)
+      return; 
+    
+    setText(""); 
+    props.showAlert("TextConvert deleted","danger");
   }
   
   return (
@@ -23,7 +35,7 @@ export default function Textform(props) {
       <button type="button" className="btn btn-primary m-3" onClick={convertToUpperCase}>
         Blue Button
       </button>
-      <button type="reset"className='btn btn-secondary m-3' onClick={()=>{setText("")}}>Delete Text</button>
+      <button type="reset"className='btn btn-secondary m-3' onClick={deleteText}>Delete Text</button>
 
       <div className="container">
         <h1 className="text-center">Welcome to My Bootstrap Page</h1>
